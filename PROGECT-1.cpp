@@ -1,3 +1,4 @@
+// SMART STUDENT CALCULATOR SYSTEM
 //Calculates total, average, percentage, and grade using user input, variables, and arithmetic operators.
 #include <iostream>
 using namespace std;

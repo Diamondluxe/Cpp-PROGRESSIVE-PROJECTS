@@ -1,3 +1,4 @@
+// SECURE LOGIN SYSTEM
 // Implements username and password validation with limited login attempts using conditions and loops.
 #include <iostream>
 using namespace std;
@@ -6,7 +7,7 @@ int main()
     string name, password;
     string correctname = "Diamondluxe";
     string correctpassword = "diamond123";
-    int attempts =0;
+    int attempts = 0;
    
     cout<<"**WELCOME TO THE LOGIN SYSTEM**"<<endl; //display the title of the program
    
