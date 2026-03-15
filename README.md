@@ -9,4 +9,9 @@
 -Covering Lecture 4 to Lecture 11 from Cpp-BEGINNER-PROGRAMS ✨
 |Implements username and password validation with limited login attempts using conditions and loops|
 
+<b>PROJECT 3 : MINI ATM MACHINE 💎</b>
+-Covering Lecture 12 to Lecture 18 from Cpp-BEGINNER-PROGRAMS ✨
+|Simulates ATM operations including login authentication, balance checking, deposit, withdrawl, and menu handling|
+
+
 </pre>
