@@ -1,5 +1,5 @@
-
-
+// MINI ATM MACHINE 
+//Simulates ATM operations including login authentication, balance checking, deposit, withdrawl, and menu handling
 #include<iostream>
 using namespace std;
 
