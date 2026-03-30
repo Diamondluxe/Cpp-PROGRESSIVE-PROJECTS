@@ -3,16 +3,28 @@
 #include<iostream>
 using namespace std;
 
+void login();
+void menu(double &balance);
+void deposit(double &balance);
+void withdraw(double &balance);
 
 int main(){
-    int pin;
-    int attempts=0;
-    int choice;
     double balance=15000;
-    double deposit,withdraw;
 
     cout<<"\n\n ******** WELCOME TO OUR LUXURY ATM ********"<<endl;
     cout<<"\n System status: Slightly happier after seeing you :)"<<endl;
+
+    login();
+
+    menu(balance);
+
+    return 0;   
+}
+
+
+void login(){
+    int pin;
+    int attempts=0;
 
     while(attempts<3)
     {
@@ -30,14 +42,19 @@ int main(){
         }
 
     }
+
     if(attempts==3)
     {
         cout<<"Too many incorrect attempts Miss. Your Card Blocked!"<<endl;
-        return 0;
+        exit(0);
     }
+}
 
-    //ATM Menu
+
+void menu(double &balance){
+    int choice;
     do{
+        
         cout<<"\n***** Options For YOU! *****\n"<<endl;
         cout<<"1. Check Balance"<<endl;
         cout<<"2. Deposit Money"<<endl;
@@ -53,25 +70,11 @@ int main(){
                 cout<<"Your Currect Balance is: "<<balance<<endl;
                 break;
             case 2:
-                cout<<"Enter amount to deposit: ";
-                cin>>deposit;
-                balance+=deposit;
-                cout<<"Deposit Successful!"<<endl;
+                deposit(balance);
                 break;
             case 3:
-                cout<<"Enter amount to withdraw: ";
-                cin>>withdraw;
-                if(withdraw <= balance)
-                {
-                    balance -= withdraw;
-                    cout<<"Withdrawal successful."<<endl;
-                    cout<<"Remaining Amount: "<<balance<<endl;
-                    break;
-                }
-                else{
-                    cout<<"Insufficient Amount"<<endl;
-                    break;
-                }
+                withdraw(balance);
+                break;
             case 4:
                 cout<<"\nThank YOU for using DIAMOND LUXE's ATM ^-^"<<endl;
                 cout<<"You're officially my favorite visitor today."<<endl;
@@ -79,9 +82,31 @@ int main(){
                 break;
             default:
                 cout<<"Invalid Choice! \n Wear Your Glasses then TRY AGAIN!"<<endl;
+                break;
         }
+    }while(choice!=4);
 
-     }while(choice!=4);
+}
 
-    return 0;   
+void deposit(double &balance){
+    double deposit;
+    cout<<"Enter amount to deposit: ";
+    cin>>deposit;
+    balance+=deposit;
+    cout<<"Deposit Successful!"<<endl;
+}
+
+void withdraw(double &balance){
+    double withdraw;
+    cout<<"Enter amount to withdraw: ";
+    cin>>withdraw;
+    if(withdraw <= balance)
+    {
+        balance -= withdraw;
+        cout<<"Withdrawal successful."<<endl;
+        cout<<"Remaining Amount: "<<balance<<endl;
+    }
+    else{
+        cout<<"Insufficient Amount"<<endl;
+    }
 }
