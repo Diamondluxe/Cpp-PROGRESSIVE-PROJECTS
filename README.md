@@ -13,7 +13,6 @@
 -Covering Lecture 12 to Lecture 18 from Cpp-BEGINNER-PROGRAMS ✨
 |Simulates ATM operations including login authentication, balance checking, deposit, withdrawl, and menu handling|
 
-
 <b>PROJECT 4 :Student Management system 💎</b>
 -Covering Lecture 19 to Lecture 29 from Cpp-BEGINNER-PROGRAMS ✨
 |Stores multiple student records using arrays and fuctions with search and result calculation features|
