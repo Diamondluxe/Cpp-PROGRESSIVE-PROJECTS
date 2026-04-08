@@ -17,4 +17,8 @@
 -Covering Lecture 19 to Lecture 29 from Cpp-BEGINNER-PROGRAMS ✨
 |Stores multiple student records using arrays and fuctions with search and result calculation features|
 
+<b>PROJECT 5 :EMPLOYEE PAYROLL SYSTEM 💎</b>
+-Covering Lecture 30 to Lecture 37 from Cpp-BEGINNER-PROGRAMS ✨
+|Manages employee data using structures, pointers, salary calculations, and file storage|
+
 </pre>
