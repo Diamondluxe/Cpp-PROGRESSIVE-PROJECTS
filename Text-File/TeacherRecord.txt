@@ -1,0 +1,4 @@
+105,Isaac Newton,Physics,45,85000
+304,Dr Jhatka,Chemistry,42,75000
+307,Kaalya Ustad,PT,32,60000
+309,Babar Azam,Cricket,34,90000

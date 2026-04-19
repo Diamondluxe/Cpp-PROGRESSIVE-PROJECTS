@@ -1,0 +1,4 @@
+101,Diamond,Computer,18,3.9
+102,Doremon,AI,17,3.8
+103,Henry,Medical,19,2.5
+104,Oggy,Accounting,1,3.2
