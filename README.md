@@ -21,4 +21,13 @@
 -Covering Lecture 30 to Lecture 37 from Cpp-BEGINNER-PROGRAMS 🌸
 |Manages employee data using structures, pointers, salary calculations, and file storage|
 
+<b>PROJECT 6 :SCHOOL MANAGEMENT SYSTEM 🎀</b>
+-Covering Lecture 38 to Lecture 45 from Cpp-BEGINNER-PROGRAMS 🌸
+|Uses classes, inheritance, encapsulation, and file handling to manage complete school records|
+
+
+ -View Complete Cpp-BEGINNER-PROGRAMS Repository Click here 🌸
+         <a href="https://github.com/Diamondluxe/Cpp-BEGINNER-PROGRAMS">"Cpp-BEGINNER-PROGRAMS"</a>
+
+
 </pre>
