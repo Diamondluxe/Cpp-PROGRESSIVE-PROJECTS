@@ -1,3 +1,5 @@
+//Smart Traffic Signal
+
 #include<iostream>
 
 using namespace std;
@@ -88,6 +90,9 @@ int main()
 {
     VehicleSensorSignal V("V715","Main Street", 60, 40, 25);
     PedestrianSensorSignal P("P715", "Central Park", 50, 60, 30, true);
+
+    cout<<endl;
+    cout<<"--WELCOME TO DIAMOND LUXE SMART TRAFFIC SIGNAL--"<<endl<<endl;
     V.displayStatus();
     cout<<endl;
     P.displayStatus();
