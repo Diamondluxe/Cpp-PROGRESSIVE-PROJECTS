@@ -25,6 +25,10 @@
 -Covering Lecture 38 to Lecture 45 from Cpp-BEGINNER-PROGRAMS 🌸
 |Uses classes, inheritance, encapsulation, and file handling to manage complete school records|
 
+<b>PROJECT 6 : SMART TRAFFIC SIGNAL SYSTEM 🎀</b>
+-Covering OOP Core Concepts from Cpp-BEGINNER-PROGRAMS 🌸
+| Features virtual functions, function overriding, and protected access management to dynamically control pedestrian and vehicle signals |
+
 
  -View Complete Cpp-BEGINNER-PROGRAMS Repository Click here 🌸
          <a href="https://github.com/Diamondluxe/Cpp-BEGINNER-PROGRAMS">"Cpp-BEGINNER-PROGRAMS"</a>
