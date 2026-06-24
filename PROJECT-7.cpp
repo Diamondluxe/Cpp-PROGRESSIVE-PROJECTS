@@ -100,7 +100,9 @@ int main()
 
 
     cout<<"Signal Efficiency: "<<V.calculateEfficiency()<<"%"<<endl;
-    cout<<"Green Duration of Pedestrian Signal: "<<P.getGreenDuration()<<endl;
+    cout<<"Green Duration of Pedestrian Signal: "<<P.getGreenDuration()<<endl<<endl;
+
+    cout<<"Thank YOU for using Our Traffic Signals ^-^"<<endl;
 
     return 0;
 
