@@ -1,6 +1,7 @@
 //Tax Paying Management System of FBR
 
 #include<iostream>
+#include<iomanip>
 using namespace std;
 
 class TaxPayer
@@ -29,11 +30,12 @@ class FilerTaxPayer: public TaxPayer
     double cost;
 
 public:
-    FilerTaxPayer(string name, string type, int rate, int ntn, int year)
+    FilerTaxPayer(string name, string type, double rate, string ntn, int year)
     : TaxPayer(name,type,rate)
     {
         NTN = ntn;
         nFilerYears = year;
+        cost = 0;
     }
 
     double CalcWithHoldingTax(double propertycost)override
@@ -48,11 +50,11 @@ public:
        cout<<"Payer Name    : "<<PayerName<<endl;
        cout<<"Payer Type    : "<<PayerType<<endl;
        cout<<"National Tax Number   : "<<NTN<<endl;
-       cout<<"Property Cost : "<<cost<<endl;
-       cout<<"Tax Rate      : "<<tax_rate<<endl;
-       cout<<"Withholding Tax     : "<<CalcWithHoldingTax(cost);
+       cout<<"Property Cost : "<<fixed<<setprecision(3)<<cost<<endl;
+       cout<<"Tax Rate      : "<<tax_rate<<"%"<<endl;
+       cout<<"Withholding Tax     : "<<CalcWithHoldingTax(cost)<<endl;
        cout<<"Number of Years from which the Payer is filer: "<<nFilerYears<<endl;
-       cout<<"********************************************"<<endl; 
+       cout<<"********************************************"<<endl<<endl; 
     }
 
     ~FilerTaxPayer()override
@@ -67,10 +69,11 @@ class NonFilerTaxPayer: public TaxPayer
     double cost;
 
 public:
-    NonFilerTaxPayer(string name,string type,int rate, string eligible)
+    NonFilerTaxPayer(string name,string type,double rate)
     : TaxPayer(name,type, rate)
     {
-        IsEligible = eligible;
+        IsEligible = "";
+        cost = 0;
     }
 
     double CalcWithHoldingTax(double propertycost)override
@@ -92,18 +95,43 @@ public:
        cout<<"Payer Name    : "<<PayerName<<endl;
        cout<<"Payer Type    : "<<PayerType<<endl;
        cout<<"Eligible      : "<<IsEligible<<endl;
-       cout<<"Property Cost : "<<cost<<endl;
-       cout<<"Tax Rate      : "<<tax_rate<<endl;
-      
-        
+       cout<<"Property Cost : "<<fixed<<setprecision(2)<<cost<<endl;
+       cout<<"Tax Rate      : "<<tax_rate<<"%"<<endl;
     
+       if(IsEligible == "Yes")
+       cout<<"Withholding Tax: "<<CalcWithHoldingTax(cost)<<endl;
+       else
+       cout<<"Not eligible to buy property above 30 lac."<<endl;
+       
+       cout<<"***********************************"<<endl<<endl;
     }
 
-    ~NonFilerTaxPayer(){}
+    ~NonFilerTaxPayer()override
+    {
+        cout<<"Destructor of NonFilerTaxPayer called for "<<PayerName<<endl<<endl;
+    }
 
 };
 
 int main()
 {
+    double PropertyCost;
+
+    cout<<"Enter the cost of property to buy: ";
+    cin>>PropertyCost;
+
+    cout<<"\n\n******* FBR Tax Paying Management System ********"<<endl;
+
+    TaxPayer *ptr;
+    ptr = new FilerTaxPayer("Umar","Filer",2.500, "17301507", 3);
+    ptr->CalcWithHoldingTax(PropertyCost);
+    ptr->DetailInfo();
+    delete ptr;
+
+    ptr = new NonFilerTaxPayer("Ahmed","Non-Filer", 5.00);
+    ptr->CalcWithHoldingTax(PropertyCost);
+    ptr->DetailInfo();
+    delete ptr;
+
 
 }
