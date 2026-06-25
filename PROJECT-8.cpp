@@ -4,7 +4,7 @@
 #include<iomanip>
 using namespace std;
 
-class TaxPayer
+class TaxPayer  //base class
 {
 protected:
     string PayerName;
@@ -23,8 +23,9 @@ public:
     virtual ~TaxPayer(){}
 };
 
-class FilerTaxPayer: public TaxPayer
+class FilerTaxPayer: public TaxPayer  //derived class
 {
+private:  
     string NTN;
     int nFilerYears;
     double cost;
@@ -63,8 +64,9 @@ public:
     }
 };
 
-class NonFilerTaxPayer: public TaxPayer
+class NonFilerTaxPayer: public TaxPayer  //derived class
 {
+private:
     string IsEligible;
     double cost;
 
@@ -120,7 +122,7 @@ int main()
     cout<<"Enter the cost of property to buy: ";
     cin>>PropertyCost;
 
-    cout<<"\n\n******* FBR Tax Paying Management System ********"<<endl;
+    cout<<"\n******* FBR Tax Paying Management System ********"<<endl;
 
     TaxPayer *ptr;
     ptr = new FilerTaxPayer("Umar","Filer",2.500, "17301507", 3);
